@@ -18,7 +18,7 @@ public class GUI extends JFrame{
     private JLabel label = new JLabel("0");
     //timer that tells the image to rotate
     private Timer timer;
-
+    //test
     public GUI() {
         timer = new Timer(1000, new ActionListener() {
             @Override

@@ -10,15 +10,13 @@ public class GUI extends JFrame{
     private int speed = 5;
 
     private JButton button = new JButton("");
-    //loads Jpanel rotating image with the image bug1.png
-    //private RotatingImage image = new RotatingImage("textbook_examples/ch12/fig12_06_07/bug1.png");
     //makes a slider that will control speed with max value of 10 and min of 0
     private JSlider slider = new JSlider(0,10);
-    //text field that will control how far the image will rotate in single rotation mode
+    //text field that shows how many objects they have
     private JLabel label = new JLabel("0");
-    //timer that tells the image to rotate
+    //timer that updates the game
     private Timer timer;
-    //test
+    //constructor for GUI
     public GUI() {
         timer = new Timer(1000, new ActionListener() {
             @Override
@@ -27,13 +25,17 @@ public class GUI extends JFrame{
             }
         });
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //adds the text button and slider to the rotating image
+        //adds a layout
         setLayout(new GridLayout(1,3));
+        //label that shows the amount the player has
         add(label);
+        //button that allows the user to update their score
         add(button);
+        //slider will be removed gets rid of shit
         add(slider);
+        //timer begin
         timer.start();
-        //changes if in continuous rotation or single rotation and changes the text on the button
+        //changes the amount the user has with every button press from label.getText() to label.getText() + speed
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                label.setText( Integer.toString( speed+Integer.parseInt(label.getText())));
@@ -47,7 +49,6 @@ public class GUI extends JFrame{
         });
         timer = new Timer(20, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //in single rotation mode
 
             }
         });

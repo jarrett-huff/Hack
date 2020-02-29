@@ -56,15 +56,6 @@ public class GUI extends JFrame{
         pack();
         setVisible(true);
     }
-    static boolean isInt(String input) {
-        try {
-            Integer.parseInt(input);
-            // s is a valid integer
-            return true;
-        } catch (NumberFormatException a) {
-            return false;
-        }
-    }
 
     public static void main(String arg[]) {
         GUI a = new GUI();

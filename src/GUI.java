@@ -47,13 +47,7 @@ public class GUI extends JFrame{
                 speed = slider.getValue();
             }
         });
-        timer = new Timer(20, new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         timer.start();
-        pack();
         setVisible(true);
     }
 
